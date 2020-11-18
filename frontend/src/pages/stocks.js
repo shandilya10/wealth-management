@@ -44,6 +44,7 @@ function Stocks(props) {
             <div className="stock-content">
             <button type="button" onClick={handleLogout} className="button secondary full-width">Logout</button>
               <h2>Welcome {userInfo.name}</h2>
+              <NavLink className="signup-image-link" to="/mystocks">My Stocks</NavLink>
               <form onSubmit={getSearch} action="#">
                 <div className="form-group">
                     <div className="input-group mb-3">

@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import config from './config';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
+import stockRoute from './routes/stockRoute';
 import bodyParser from 'body-parser';
 
 dotenv.config();
@@ -17,6 +18,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/api/users', userRoute);
+app.use('/api/profile', stockRoute);
 app.get('/', (req,res) => {
     res.send('Server Running!');
 });

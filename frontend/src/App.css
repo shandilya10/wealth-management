@@ -1,1 +1,4 @@
 h1{text-align: center;font-size: 45px;margin-bottom: 50px;}
+.stock_item.unfollowed{display: none;}
+
+/* stocks page */

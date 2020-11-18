@@ -2,6 +2,7 @@ import './App.css';
 import login from "./pages/login";
 import register from "./pages/register";
 import stocks from "./pages/stocks";
+import mystocks from "./pages/mystocks";
 import {
   Route,
   HashRouter
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" component={login}/>
           <Route path="/register" component={register}/>
           <Route path="/stocks" component={stocks}/>
+          <Route path="/mystocks" component={mystocks}/>
       </HashRouter>
     </div>
   );
