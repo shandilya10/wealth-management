@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import { useSelector } from "react-redux";
-function Singlestock({symbol, name}) {
+function Singlestock({symbol, name, type, region, currency, matchscore}) {
   const userSignin = useSelector(state=> state.userSignin);
   const {userInfo} = userSignin;
   const [uploading, setUploading] = useState(false);
@@ -12,7 +12,12 @@ function Singlestock({symbol, name}) {
     setUploading(true);
     Axios
       .post('/api/profile/follow', {
-        symbol_hid: symbol
+        symbol_hid: symbol,
+        name_hid: name,
+        type_hid: type,
+        region_hid: region,
+        currency_hid: currency,
+        matchscore_hid: matchscore,
       }, {
         headers: {
           Authorization: ' Bearer ' + userInfo.token
@@ -35,10 +40,14 @@ function Singlestock({symbol, name}) {
       <form onSubmit={handleSubmit} className="single-stock-form" id="stock-form">
         <div className="blog_details">
           <h4>{symbol}</h4>
-          <p>{name}</p>
-          <input type="hidden" id={symbol} name="symbol_hidden" value={symbol} />
-          {followed ? <button type="submit" name="unfollow" id="unfollow" className="form-submit">UnFollow</button> : <button type="submit" name="signup" id="signup" className="form-submit">Follow</button>}
-          {uploading && <div>Uploading...</div>}
+          <div className="inside_box">
+            <div><span>Name</span> : {name}</div>
+            <div><span>Type</span> : {type}</div>
+            <div><span>Region</span> : {region}</div>
+            <div><span>Currency</span> : {currency}</div>
+            <div><span>Matchscore</span> : {matchscore}</div>
+          </div>
+          {followed ? <div className="s_followed">You have followed {symbol}</div> : <button type="submit" name="signup" id="signup" className="form-submit">{uploading ? "Loading..." : "Follow" }</button>}
           {error && <div>Error...</div>}
         </div>
       </form>

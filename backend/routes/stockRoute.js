@@ -6,6 +6,11 @@ router.post("/follow",isAuth, async(req,res) => {
     const newStock = new Stock({
       user: req.user._id,
       symbol: req.body.symbol_hid,
+      name: req.body.name_hid,
+      type: req.body.type_hid,
+      region: req.body.region_hid,
+      currency: req.body.currency_hid,
+      matchscore: req.body.matchscore_hid,
     });
     const newStockCreated = await newStock.save();
     res.status(201).send({ message: "New Order Created", data: newStockCreated });

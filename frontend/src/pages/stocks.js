@@ -42,20 +42,26 @@ function Stocks(props) {
         <section className="stocks">
           <div className="container">
             <div className="stock-content">
-            <button type="button" onClick={handleLogout} className="button secondary full-width">Logout</button>
-              <h2>Welcome {userInfo.name}</h2>
-              <NavLink className="signup-image-link" to="/mystocks">My Stocks</NavLink>
-              <form onSubmit={getSearch} action="#">
-                <div className="form-group">
-                    <div className="input-group mb-3">
-                        <input type="text" className="form-control" placeholder="Search Keyword" value={search} onChange={updateSearch} />
+              <div className="top-section">
+                <h2>Welcome, {userInfo.name}</h2>
+                <form onSubmit={getSearch} action="#">
+                  <div class="search">
+                    <input type="text" className="form-control" placeholder="Search Stocks Here..." value={search} onChange={updateSearch} required />
+                    <div class="button-src">
+                      <button className="button rounded-0 primary-bg text-white w-100 btn_1" type="submit">Search</button>
                     </div>
+                  </div>
+                </form>
+                <div className="links">
+                  <NavLink className="stocks-link" to="/mystocks">My Stocks</NavLink>
+                  <button type="button" onClick={handleLogout} className="button secondary full-width">Logout</button>
                 </div>
-                <button className="button rounded-0 primary-bg text-white w-100 btn_1" type="submit">Search</button>
-              </form>
-              {stocks.map(stock => (
-                    <Singlestock symbol={stock["1. symbol"]} name={stock["2. name"]} />
-              ))}
+              </div>
+              <div className="stock-boxes">
+                {stocks.map(stock => (
+                  <Singlestock symbol={stock["1. symbol"]} name={stock["2. name"]} type={stock["3. type"]} region={stock["4. region"]} currency={stock["8. currency"]} matchscore={stock["9. matchScore"]} />
+                ))}
+              </div>
             </div>
           </div>
         </section>

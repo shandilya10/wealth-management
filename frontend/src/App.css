@@ -1,4 +1,72 @@
 h1{text-align: center;font-size: 45px;margin-bottom: 50px;}
 .stock_item.unfollowed{display: none;}
-
+.main{padding: 58px 0;}
 /* stocks page */
+.stocks .container {
+    max-width: 1140px;
+    width: auto;
+}   
+.stocks h2{font-size: 20px;}
+.stock-content{padding: 50px;}
+.top-section{padding: 0px 15px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
+.stocks-link{margin: 0px 25px;font-size: 16px;color: #031c38;}
+.stocks-link:hover{opacity: 0.8;}
+.links button{background-color: #1861b2;color: #fff;padding: 10px 20px;border: unset;border-radius: 5px;cursor: pointer;}
+.links button:hover{opacity: 0.9;}
+.search{
+    overflow-x: hidden;
+    display: flex;
+}
+.search input{
+    outline: 0; 
+  width: 100%;
+  background: var(--color-light);
+  padding: 0;
+  border-radius: var(--rad);
+  appearance: none;     
+  transition: all var(--dur) var(--bez);
+  z-index: 1;
+  position: relative;
+   
+}
+.button-src{
+    display: inline-block;
+}
+.button-src button, .form-submit{
+background-color: #1861b2;
+color: #fff;
+padding: 10px 20px;
+border: unset;
+border-radius: 5px;
+cursor: pointer;
+}
+.button-src button:hover{opacity: 0.9;}
+.stock-boxes{width: 100%;display: inline-block;margin-top: 55px;}
+.stock-boxes .stock_item{width: 31%;float: left;margin: 13px 12px; background-color: #f8f8f8;border-radius: 20px;min-height: 320px;}
+.single-stock-form{padding: 30px;}
+.single-stock-form span{font-weight: bold;}
+.stocks h4{margin-top: 0px;margin-bottom: 14px;font-size: 20px;}
+.s_followed {margin-top: 32px;color: #1861b2;font-size: 18px;}
+.inside_box{min-height: 142px;}
+.stocks-link.mystocks{margin: 0px;}
+
+/* Responsive Design */
+@media screen and (max-width: 640px) {
+    .stock-boxes .stock_item{width: 100%;margin: 0px 0px 18px 0px;}
+    .stock-boxes{margin-top: 32px;}
+}
+@media screen and (max-width: 768px) {
+    .top-section{display: inline-block !important;text-align: center;width: 100%;padding: 0px;}
+    .top-section h2{margin-bottom: 15px;}
+    .top-section form{margin-bottom: 30px;}
+    .main {padding: 18px;}
+    .search{display: inline-flex;}
+    h1{font-size: 26px;margin-bottom: 34px;}
+}
+@media screen and (max-width: 991px) {
+    .search input{width: 175px;}
+}
+
+@media only screen and (max-width: 1125px) and (min-width: 640px)  {
+    .stock-boxes .stock_item{width: 45%;}
+}

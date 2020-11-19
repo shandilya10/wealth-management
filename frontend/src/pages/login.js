@@ -44,10 +44,6 @@ function Login(props) {
                     <label htmlFor="your_pass"><i className="zmdi zmdi-lock" /></label>
                     <input type="password" name="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
                   </div>
-                  <div className="form-group">
-                    <input type="checkbox" name="remember-me" id="remember-me" className="agree-term" />
-                    <label htmlFor="remember-me" className="label-agree-term"><span><span /></span>Remember me</label>
-                  </div>
                   <div className="form-group form-button">
                     <button type="submit" className="form-submit">Log in</button>
                   </div>
