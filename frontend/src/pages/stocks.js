@@ -15,7 +15,7 @@ function Stocks(props) {
 
     const [stocks, setStocks] = useState([]);
     const [search, setSearch] = useState("");
-    const [query, setQuery] = useState('ibm');
+    const [query, setQuery] = useState('ap');
 
     useEffect( () => {
         getStocks();

@@ -29,23 +29,25 @@ function Login(props) {
             <div className="signin-content">
               <div className="signin-image">
                 <figure><img src="assets/images/signin-image.jpg" alt="sing up image" /></figure>
-                <NavLink className="signup-image-link" to="/register">Create an account</NavLink>
               </div>
               <div className="signin-form">
                 <h2 className="form-title">Login</h2>
                 <form onSubmit={submitHandler} className="register-form" id="login-form">
-                  {loading && <div>Loading...</div>}
-                  {error && <div>{error}</div>}
                   <div className="form-group">
                     <label htmlFor="your_name"><i className="zmdi zmdi-account material-icons-name" /></label>
-                    <input type="email" name="email" id="email" placeholder="Your Name" onChange={(e) => setEmail(e.target.value)}/>
+                    <input type="email" name="email" id="email" placeholder="Username" required onChange={(e) => setEmail(e.target.value)}/>
                   </div>
                   <div className="form-group">
                     <label htmlFor="your_pass"><i className="zmdi zmdi-lock" /></label>
-                    <input type="password" name="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password" name="password" id="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)}/>
                   </div>
                   <div className="form-group form-button">
-                    <button type="submit" className="form-submit">Log in</button>
+                    {loading && <div>Loading...</div>}
+                    {error && <span className="error_form">Invalid Username or Password...</span>}
+                    <div className="log_res_links">
+                      <button type="submit" className="form-submit">Log in</button>
+                      <NavLink className="signup-image-link" to="/register">Not Registered?</NavLink>
+                    </div>
                   </div>
                 </form>
               </div>

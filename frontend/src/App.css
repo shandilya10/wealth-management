@@ -1,9 +1,9 @@
-h1{text-align: center;font-size: 45px;margin-bottom: 50px;}
+h1{text-align: center;font-size: 40px;margin-bottom: 50px;}
 .stock_item.unfollowed{display: none;}
-.main{padding: 58px 0;}
+.main{padding: 40px 0;}
 /* stocks page */
 .stocks .container {
-    max-width: 1140px;
+    max-width: 1175px;
     width: auto;
 }   
 .stocks h2{font-size: 20px;}
@@ -46,10 +46,16 @@ cursor: pointer;
 .single-stock-form{padding: 30px;}
 .single-stock-form span{font-weight: bold;}
 .stocks h4{margin-top: 0px;margin-bottom: 14px;font-size: 20px;}
-.s_followed {margin-top: 32px;color: #1861b2;font-size: 18px;}
+.s_followed {margin-top: 32px;color: #1861b2;font-size: 15px;}
 .inside_box{min-height: 142px;}
 .stocks-link.mystocks{margin: 0px;}
-
+.signin-form h2{font-size: 25px;}
+span.error_form{color: red;display: block;}
+.stock_item.followed{display: none;}
+.log_res_links .form-submit{margin-top: 0px;}
+.log_res_links{display: -webkit-box;display: -ms-flexbox;display: flex;margin-top: 10px;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: wrap;flex-wrap: wrap;}
+.log_res_links a{margin: 4px 0px 0px 25px;}
+.log_res_links a:hover{opacity: 0.9;}
 /* Responsive Design */
 @media screen and (max-width: 640px) {
     .stock-boxes .stock_item{width: 100%;margin: 0px 0px 18px 0px;}
@@ -59,9 +65,9 @@ cursor: pointer;
     .top-section{display: inline-block !important;text-align: center;width: 100%;padding: 0px;}
     .top-section h2{margin-bottom: 15px;}
     .top-section form{margin-bottom: 30px;}
-    .main {padding: 18px;}
-    .search{display: inline-flex;}
+    .search{display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex;}
     h1{font-size: 26px;margin-bottom: 34px;}
+    .stocks-link.mystocks{margin-bottom: 16px;display: block;}
 }
 @media screen and (max-width: 991px) {
     .search input{width: 175px;}
@@ -69,4 +75,7 @@ cursor: pointer;
 
 @media only screen and (max-width: 1125px) and (min-width: 640px)  {
     .stock-boxes .stock_item{width: 45%;}
+}
+@media screen and (max-width: 1200px) {
+    .main {padding: 18px;}
 }

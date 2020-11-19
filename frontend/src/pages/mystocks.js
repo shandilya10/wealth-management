@@ -8,8 +8,6 @@ function Mystocks(props) {
   const userSignin = useSelector(state=> state.userSignin);
   const {userInfo} = userSignin;
   const dispatch = useDispatch();
-  const [uploading, setUploading] = useState(false);
-  const [followed, setFollowed] = useState(false);
   const [error, setError] = useState(false);
   const [stocks, setStocks] = useState([]);
 
@@ -32,18 +30,14 @@ function Mystocks(props) {
       .then((response) => {
         console.log(response.data);
         setStocks(response.data);
-        setUploading(false);
-        setFollowed(true);
       })
       .catch((err) => {
         console.log(err);
-        setUploading(false);
         setError(true);
       });
     };
 
     return (
-
     <div className="main">
         <section className="stocks">
           <div className="container">
@@ -55,11 +49,11 @@ function Mystocks(props) {
                   <button type="button" onClick={handleLogout} className="button secondary full-width">Logout</button>
                 </div>
             </div>
-              
             <div className="stock-boxes">
               {stocks.map(stock => (
                     <Singlemystock s_id={stock._id} symbol={stock.symbol} name={stock.name} type={stock.type} region={stock.region} currency={stock.currency} matchscore={stock.matchscore} />
               ))}
+              {error && <div>Error while loading the data...</div>}
             </div>
             </div>
           </div>

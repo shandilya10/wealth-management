@@ -36,7 +36,7 @@ function Singlestock({symbol, name, type, region, currency, matchscore}) {
     };
 
     return (
-    <div className="stock_item">
+    <div className={"stock_item " + (followed && 'followed')}>
       <form onSubmit={handleSubmit} className="single-stock-form" id="stock-form">
         <div className="blog_details">
           <h4>{symbol}</h4>
@@ -47,7 +47,7 @@ function Singlestock({symbol, name, type, region, currency, matchscore}) {
             <div><span>Currency</span> : {currency}</div>
             <div><span>Matchscore</span> : {matchscore}</div>
           </div>
-          {followed ? <div className="s_followed">You have followed {symbol}</div> : <button type="submit" name="signup" id="signup" className="form-submit">{uploading ? "Loading..." : "Follow" }</button>}
+          <button type="submit" name="signup" id="signup" className="form-submit">{uploading ? "Loading..." : "Follow" }</button>
           {error && <div>Error...</div>}
         </div>
       </form>

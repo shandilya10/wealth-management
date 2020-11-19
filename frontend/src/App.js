@@ -5,7 +5,8 @@ import stocks from "./pages/stocks";
 import mystocks from "./pages/mystocks";
 import {
   Route,
-  HashRouter
+  HashRouter,
+  Redirect
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
 function App() {
@@ -19,8 +20,8 @@ function App() {
           <Route exact path="/" component={login}/>
           <Route path="/login" component={login}/>
           <Route path="/register" component={register}/>
-          <Route path="/stocks" component={stocks}/>
-          <Route path="/mystocks" component={mystocks}/>
+          {userInfo ? <Route path="/stocks" component={stocks}/> : <Redirect path="/login" component={login}/> }
+          {userInfo ? <Route path="/mystocks" component={mystocks}/> : <Redirect path="/login" component={login}/> }
       </HashRouter>
     </div>
   );

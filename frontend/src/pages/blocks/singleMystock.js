@@ -41,9 +41,7 @@ function Singlemystock({symbol, name, type, region, currency, matchscore, s_id})
           </div>
           <input type="hidden" id={symbol} name="symbol_hidden" value={symbol} />
           <button type="submit" name="unfollow" id="unfollow" className="form-submit">{uploading ? "Loading" : "Unfollow" }</button>
-          
           {error && <div>Error...</div>}
-          {unfollowed && <div>Successfully Unfollowed...</div>}
         </div>
       </form>
     </div>
