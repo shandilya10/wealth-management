@@ -8,7 +8,6 @@ function Mystocks(props) {
   const userSignin = useSelector(state=> state.userSignin);
   const {userInfo} = userSignin;
   const dispatch = useDispatch();
-  const [error, setError] = useState(false);
   const [stocks, setStocks] = useState([]);
 
   const handleLogout = () => {
@@ -33,7 +32,6 @@ function Mystocks(props) {
       })
       .catch((err) => {
         console.log(err);
-        setError(true);
       });
     };
 
@@ -50,10 +48,9 @@ function Mystocks(props) {
                 </div>
             </div>
             <div className="stock-boxes">
-              {stocks.map(stock => (
+            {stocks === undefined ?  <img className="loading_image" src="assets/images/loading.gif" /> : stocks.length > 0 ? stocks.map(stock => (
                     <Singlemystock s_id={stock._id} symbol={stock.symbol} name={stock.name} type={stock.type} region={stock.region} currency={stock.currency} matchscore={stock.matchscore} />
-              ))}
-              {error && <div>Error while loading the data...</div>}
+              )) : <div className="stocks_process">No stocks available, Please follow stocks.</div>}
             </div>
             </div>
           </div>

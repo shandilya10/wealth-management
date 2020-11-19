@@ -9,6 +9,7 @@ router.post("/follow",isAuth, async(req,res) => {
       if(err) console.log(err);
       if ( example){
         console.log("This has already been saved");
+        res.status(404).send({ message: "Already exist!" });
         } else {
           const newStock = new Stock({
             user: req.user._id,

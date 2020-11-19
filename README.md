@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Wealth Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app helps customer to login and register to their account and search, manage their portfolio of stocks.
 
-## Available Scripts
+The app allow the user to do the following:
 
-In the project directory, you can run:
+- login to their portfolio
+- search for stocks
+- follow stocks they are interested in
+- unfollow stocks they are no longer interested in
 
-### `npm start`
+## Run Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. Clone repo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+$ git clone git@github.com:shandilya10/wealth-management.git
+$ cd wealth-management
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Install MongoDB
 
-### `npm run build`
+Download it from here: https://docs.mongodb.com/manual/administration/install-community/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Run Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+$ npm install
+$ npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+### 4. Run Frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+# open new terminal
+$ cd frontend
+$ npm install
+$ npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 5. Register
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Run http://localhost:3000/register
+- Enter details and click register
 
-## Learn More
+### 6. Login
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Run http://localhost:3000/login
+- Enter admin email and password and click login
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 7. Stocks
 
-### Code Splitting
+- After login, Run http://localhost:3000/stocks
+- Search stocks and follow.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 8. My Stocks
 
-### Analyzing the Bundle Size
+- Run http://localhost:3000/mystocks
+- List of your followed stocks, click unfollow to remove.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technology Used
 
-### Making a Progressive Web App
+- HTML5 and CSS3: Semantic Elements, Flexbox
+- React: Components, Props, Events, Hooks, Router, Axios
+- Redux: Store, Reducers, Actions
+- Node & Express: Web API, Body Parser, JWT
+- MongoDB: Mongoose
+- Development: Babel, Git, Github
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Things took care of
 
-### Advanced Configuration
+- Simple design for better user experience and because of responsive single page application every components of the site are accessible better. 
+- Better file structure and easily understable code to know the flow of the project.
+- Simple and scalable database design.
+- Design and built API endpoints which works better for rendering data on front side.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Future Scope
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Social media login and register
+- Password strength validation on Register
+- More information about users
+- More information about single stock after clicking know more
+- Using Intraday endpoint of API, track ups and down of stocks on stock single page

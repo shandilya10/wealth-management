@@ -22,7 +22,7 @@ function App() {
           <Route path="/register" component={register}/>
           {userInfo ? <Route path="/stocks" component={stocks}/> : <Redirect path="/login" component={login}/> }
           {userInfo ? <Route path="/mystocks" component={mystocks}/> : <Redirect path="/login" component={login}/> }
-      </HashRouter>
+      </HashRouter> 
     </div>
   );
 }

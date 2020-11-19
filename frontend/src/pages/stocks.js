@@ -58,9 +58,9 @@ function Stocks(props) {
                 </div>
               </div>
               <div className="stock-boxes">
-                {stocks.map(stock => (
+              {stocks === undefined ?  <img className="loading_image" src="assets/images/loading.gif" /> : stocks.length > 0 ? stocks.map(stock => (
                   <Singlestock symbol={stock["1. symbol"]} name={stock["2. name"]} type={stock["3. type"]} region={stock["4. region"]} currency={stock["8. currency"]} matchscore={stock["9. matchScore"]} />
-                ))}
+                )) : <img className="loading_image" src="assets/images/loading.gif" />}
               </div>
             </div>
           </div>

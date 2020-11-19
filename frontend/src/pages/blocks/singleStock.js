@@ -6,7 +6,7 @@ function Singlestock({symbol, name, type, region, currency, matchscore}) {
   const {userInfo} = userSignin;
   const [uploading, setUploading] = useState(false);
   const [followed, setFollowed] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     setUploading(true);
@@ -24,14 +24,13 @@ function Singlestock({symbol, name, type, region, currency, matchscore}) {
         }
       })
       .then((response) => {
-        console.log(response);
+        console.log(response.message);
         setUploading(false);
         setFollowed(true);
       })
       .catch((err) => {
-        console.log(err);
         setUploading(false);
-        setError(true);
+        setError(err.response.data.message);
       });
     };
 
@@ -48,7 +47,7 @@ function Singlestock({symbol, name, type, region, currency, matchscore}) {
             <div><span>Matchscore</span> : {matchscore}</div>
           </div>
           <button type="submit" name="signup" id="signup" className="form-submit">{uploading ? "Loading..." : "Follow" }</button>
-          {error && <div>Error...</div>}
+          {error && <span className="err_msg">{error}</span>}
         </div>
       </form>
     </div>

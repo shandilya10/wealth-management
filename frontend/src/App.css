@@ -51,11 +51,14 @@ cursor: pointer;
 .stocks-link.mystocks{margin: 0px;}
 .signin-form h2{font-size: 25px;}
 span.error_form{color: red;display: block;}
+span.err_msg{color: red;margin-left: 12px;}
 .stock_item.followed{display: none;}
 .log_res_links .form-submit{margin-top: 0px;}
 .log_res_links{display: -webkit-box;display: -ms-flexbox;display: flex;margin-top: 10px;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: wrap;flex-wrap: wrap;}
 .log_res_links a{margin: 4px 0px 0px 25px;}
 .log_res_links a:hover{opacity: 0.9;}
+.stocks_process{text-align: center;font-size: 24px;margin: 50px 0px;}
+.loading_image{text-align: center;margin: 0 auto;display: block;float: none;}
 /* Responsive Design */
 @media screen and (max-width: 640px) {
     .stock-boxes .stock_item{width: 100%;margin: 0px 0px 18px 0px;}
