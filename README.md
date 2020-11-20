@@ -26,6 +26,7 @@ Download it from here: https://docs.mongodb.com/manual/administration/install-co
 ### 3. Run Backend
 
 ```
+$ cd backend
 $ npm install
 $ npm start
 
@@ -41,22 +42,30 @@ $ npm start
 
 ```
 
-### 5. Register
+### 5. Run Test
+
+```
+# Inside backend terminal
+$ npm run test
+
+```
+
+### 6. Register
 
 - Run http://localhost:3000/register
 - Enter details and click register
 
-### 6. Login
+### 7. Login
 
 - Run http://localhost:3000/login
 - Enter admin email and password and click login
 
-### 7. Stocks
+### 8. Stocks
 
 - After login, Run http://localhost:3000/stocks
 - Search stocks and follow.
 
-### 8. My Stocks
+### 9. My Stocks
 
 - Run http://localhost:3000/mystocks
 - List of your followed stocks, click unfollow to remove.
@@ -69,6 +78,7 @@ $ npm start
 - Node & Express: Web API, Body Parser, JWT
 - MongoDB: Mongoose
 - Development: Babel, Git, Github
+- Test: Jest
 
 ## Things took care of
 
@@ -83,4 +93,4 @@ $ npm start
 - Password strength validation on Register
 - More information about users
 - More information about single stock after clicking know more
-- Using Intraday endpoint of API, track ups and down of stocks on stock single page
+- Using Intraday endpoint of API, track ups and downs of stocks on stock single page
