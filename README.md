@@ -42,7 +42,15 @@ $ npm start
 
 ```
 
-### 5. Run Test
+### 5. Run Build
+
+```
+# open new terminal
+$ npm run build
+
+```
+
+### 6. Run Test
 
 ```
 # Inside backend terminal
@@ -50,22 +58,22 @@ $ npm run test
 
 ```
 
-### 6. Register
+### 7. Register
 
 - Run http://localhost:3000/register
 - Enter details and click register
 
-### 7. Login
+### 8. Login
 
 - Run http://localhost:3000/login
 - Enter admin email and password and click login
 
-### 8. Stocks
+### 9. Stocks
 
 - After login, Run http://localhost:3000/stocks
 - Search stocks and follow.
 
-### 9. My Stocks
+### 10. My Stocks
 
 - Run http://localhost:3000/mystocks
 - List of your followed stocks, click unfollow to remove.
@@ -94,3 +102,4 @@ $ npm run test
 - More information about users
 - More information about single stock after clicking know more
 - Using Intraday endpoint of API, track ups and downs of stocks on stock single page
+- Deployment of the project.
