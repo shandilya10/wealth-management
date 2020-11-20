@@ -56,23 +56,28 @@ $ npm run build
 $ npm run test
 
 ```
+### 7. Add API key
 
-### 7. Register
+- Create API key from this link https://www.alphavantage.co/support/#api-key
+- Add newly generated key to /frontend/src/pages/stocks.js
+
+
+### 8. Register
 
 - Run http://localhost:3000/register
 - Enter details and click register
 
-### 8. Login
+### 9. Login
 
 - Run http://localhost:3000/login
 - Enter admin email and password and click login
 
-### 9. Stocks
+### 10. Stocks
 
 - After login, Run http://localhost:3000/stocks
 - Search stocks and follow.
 
-### 10. My Stocks
+### 11. My Stocks
 
 - Run http://localhost:3000/mystocks
 - List of your followed stocks, click unfollow to remove.
