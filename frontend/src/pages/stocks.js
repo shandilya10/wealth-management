@@ -5,6 +5,7 @@ import { logout } from '../actions/userActions';
 import Singlestock from "./blocks/singleStock";
 
 function Stocks(props) {
+    const api_key= 'Your API Key';
     const userSignin = useSelector(state=> state.userSignin);
     const {userInfo} = userSignin;
     const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function Stocks(props) {
 
     const getStocks = async () => {
         const response = await fetch(
-            'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords='+query+'&apikey=9H1V4UQOAL9ECCDC');
+            'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords='+query+'&apikey='+api_key);
         const data = await response.json();
         console.log(data.bestMatches);
         setStocks(data.bestMatches);
