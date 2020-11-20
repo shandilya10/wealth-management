@@ -45,7 +45,6 @@ $ npm start
 ### 5. Run Build
 
 ```
-# open new terminal
 $ npm run build
 
 ```
